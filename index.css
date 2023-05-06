@@ -24,6 +24,7 @@
   --spacing-md: 16px;
   --spacing-lg: 32px;
   --spacing-xl: 64px;
+  --width-standard: 1144px;
   --company-blue-1: #317df0;
   --company-blue-2: #003cff;
   --blue-1: #00eeff;
@@ -40,6 +41,11 @@ body {
     margin: 0;
     box-sizing: border-box;
     padding: var(--spacing-sm) 0 0 0;
+    background-color: var(--company-blue-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -183,4 +189,45 @@ p {
 
 .with-icon:hover > img {
     transform: translateX(5px)
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: var(--width-standard);
+    padding: 0 var(--spacing-md);
+}
+
+.mainlogo {
+    width: 140px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.menu a {
+    color: white;
+    margin: 0px var(--spacing-md);
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.navbar-button {
+    background-color: rgba(250, 250, 250, 0.25);
+    margin-left: 50px;
+}
+
+.navbar-button:hover {
+    background-color: rgba(250, 250, 250, 0.55);
 }
