@@ -4,8 +4,8 @@
   --text-grey: #78c2c4;
   --body-font: "Roboto", sans-serif;
   --heading-font: "Anek Telugu", sans-serif;
-  --h1-size: 94px;
-  --h1-height: 108px;
+  --h1-size: 96px;
+  --h1-height: 104px;
   --h2-size: 50px;
   --h2-height: 75px;
   --h3-size: 40px;
@@ -24,6 +24,8 @@
   --spacing-md: 16px;
   --spacing-lg: 32px;
   --spacing-xl: 64px;
+  --spacing-xxl: 100px;
+  --spacing-xxxl: 140px;
   --width-standard: 1144px;
   --company-blue-1: #317df0;
   --company-blue-2: #003cff;
@@ -32,6 +34,9 @@
   --primary-button-hover: #6d7a88;
   --bg-white: #fff;
   --bg-light: #f2f5f8;
+
+  --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
+  --heavy-box-shadow: 4px 4px 26px rgba(0, 0, 0, 0.50);
 }
 
 body {
@@ -41,7 +46,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     padding: var(--spacing-sm) 0 0 0;
-    background-color: var(--company-blue-1);
+    background-color: var(--bg-white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,13 +64,11 @@ h1 {
 }
 
 h2 {
-  font-family: var(--heading-font);
-  font-size: var(--h2-size);
-  line-height: var(--h2-height);
-  font-weight: 500;
-  margin: 0;
-  width: 100%;
-  letter-spacing: -0.25px;
+    font-family: var(--heading-font);
+    font-size: var(--h3-size);
+    font-weight: 600;
+    margin: 0;
+    width: 100%;
 }
 
 h3 {
@@ -117,6 +120,41 @@ p {
     line-height: var(--p-height);
     font-weight: 400px;
     margin: var(--spacing-md) 0;
+}
+
+/* Layout Styles */
+.section-container {
+    width: 100%;
+    max-width: var(--width-standard);
+}
+
+.two-column {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.two-column > .col-left {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 var(--spacing-md) 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.two-column > .col-right {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 0 0 var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
 }
 
 .subtitle {
@@ -202,7 +240,7 @@ p {
 }
 
 .mainlogo {
-    width: 140px;
+    width: 165px;
 }
 
 .menu {
@@ -225,9 +263,110 @@ p {
 
 .navbar-button {
     background-color: rgba(250, 250, 250, 0.25);
-    margin-left: 50px;
+    margin: 0 10px 0 60px;
 }
 
 .navbar-button:hover {
     background-color: rgba(250, 250, 250, 0.55);
+}
+
+/* Hero */
+main {
+    margin: var(--spacing-xl) 0;
+}
+.button-container {
+    display: flex;
+    flex-direction: row;
+    margin: var(--spacing-md) 0;
+}
+
+.button-container button:nth-of-type(2) {
+    margin: 0 0 0 var(--spacing-md);
+    color: var(--company-blue-2);
+}
+
+.hero p {
+    max-width: 430px;
+}
+
+.hero .airplane-container {
+    height: 550px;
+    position: relative;
+}
+
+.airplane {
+    width: 600px;
+    position: absolute;
+    left: -20px;
+}
+
+/* Partners Section */
+.partners-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: var(--spacing-xxl) 0;
+}
+
+.partners-grid img {
+    width: 55%;
+    place-self: center;
+}
+
+/* Maintenance Section */
+.maintenance-section {
+    padding: var(--spacing-lg) 0;
+}
+
+.maintenance-section h2 {
+    width: 50%;
+    margin-bottom: var(--spacing-md)
+}
+
+.maintenance-section .primary-button {
+    background-color: var(--company-blue-1);
+    margin: var(--spacing-md) 0 var(--spacing-lg) 0;
+}
+
+.maintenance-section .primary-button:hover {
+    background-color: var(--primary-accent);
+}
+
+/* Graphic-Section-1 */
+.graphic-grid {
+    display: grid;
+    grid-template-areas: 
+    "engine engine ecam"
+    "interior plane plane"
+    "interior plane plane";
+    grid-gap: var(--spacing-lg);
+    padding: var(--spacing-lg) 0;
+}
+
+#engine {
+    grid-area: engine;
+    width: 100%;
+    border-radius: 40px;
+    box-shadow: var(--heavy-box-shadow);
+}
+
+#ecam {
+    grid-area: ecam;
+    width: 100%;
+    border-radius: 40px;
+    box-shadow: var(--heavy-box-shadow);
+}
+
+#airplane {
+    grid-area: plane;
+    width: 100%;
+    border-radius: 40px;
+    box-shadow: var(--heavy-box-shadow);
+}
+
+#interior {
+    grid-area: interior;
+    width: 100%;
+    border-radius: 40px;
+    box-shadow: var(--heavy-box-shadow);
 }
