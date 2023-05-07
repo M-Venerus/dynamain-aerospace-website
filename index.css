@@ -433,3 +433,18 @@ main {
     border-radius: 40px;
 }
 
+/* Our Commitment Section */
+.commitment-section .card-container {
+    display: flex;
+    margin: var(--spacing-lg) 0;
+}
+
+.commitment-section .card-container .card {
+    width: 25%;
+    padding: 0 var(--spacing-sm) 0 0;
+    margin: 0 var(--spacing-md) 0 0;
+}
+
+.commitment-section .secondary-text {
+    color: var(--text-dark);
+}
