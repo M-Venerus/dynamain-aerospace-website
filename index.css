@@ -29,6 +29,7 @@
   --text-dark: #000;
   --text-light: #fff;
   --text-grey: #a9b5c5;
+  --text-dark-grey: #3e444b;
   --company-blue-1: #317df0;
   --company-blue-2: #003cff;
   --blue-1: #00eeff;
@@ -334,9 +335,10 @@ p {
 }
 
 .airplane {
-  width: 600px;
+  width: 640px;
   position: absolute;
-  left: -30px;
+  left: -40px;
+  top: 90px;
 }
 
 /* Partners Section */
@@ -525,12 +527,16 @@ p {
   line-height: 28px;
 }
 
+.global-section .col-right {
+  position: relative;
+}
+
 #globe {
   max-width: 844px;
-  opacity: 30%;
+  opacity: 22%;
   position: absolute;
-  top: 0;
-  left: 670px;
+  top: -135px;
+  left: 20px;
 }
 
 /* Projects Section */
@@ -538,7 +544,7 @@ p {
 .projects-section {
   display:flex;
   justify-content: center;
-  padding: var(--spacing-xxxl);
+  padding: var(--spacing-xxxl) 0;
 }
 
 .projects-section .primary-button {
@@ -552,7 +558,7 @@ p {
 
 .projects-section .col-left {
   height: 430px;
-  padding: 0 var(--spacing-lg) 0 0;
+  padding: 0 var(--spacing-xl) 0 0;
 }
 
 .projects-card {
@@ -597,17 +603,17 @@ p {
 }
 
 .project-photos-section .project-photos:nth-of-type(2) {
-  bottom: -53px;
+  bottom: -52px;
   left: 145px;
 }
 
 .project-photos-section .project-photos:nth-of-type(3) {
-  bottom: -46px;
+  bottom: -44px;
   left: 260px;
 }
 
 .project-photos-section .project-photos:nth-of-type(4) {
-  bottom: -39px;
+  bottom: -36px;
   left: 375px;
 }
 
@@ -617,7 +623,7 @@ p {
   z-index: 2;
   position: absolute;
   top: 30px;
-  left: 130px;
+  left: 132px;
 }
 
 .projects-card .card-bottom {
@@ -641,4 +647,46 @@ p {
   color: var(--text-dark);
   margin: 0 0 0 var(--spacing-md);
   font-weight: 500;
+}
+
+/* Inquiry Section */
+.inquiry-section {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-xl);
+
+}
+
+.inquiry-section .primary-button {
+  background-color: var(--company-blue-1);
+}
+
+.inquiry-section .primary-button:hover {
+  background-color: var(--primary-accent);
+  margin: var(--spacing-md) 0;
+}
+
+.inquiry-section .col-left {
+  padding: 0 var(--spacing-xl) 0 0;
+}
+
+.inquiry-section .col-right {
+  flex-direction: row;
+  padding: var(--spacing-md) 0 0 var(--spacing-md);
+}
+
+.inquiry-section .col-right .card {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 var(--spacing-md) 0 0;
+  margin: 0 var(--spacing-sm) 0 0;
+}
+
+.inquiry-section .col-right .card .secondary-text {
+  color: var(--text-dark-grey);
+}
+
+.inquiry-section .col-right .card .secondary-button {
+  color: var(--company-blue-2);
+  padding-left: 0;
 }
