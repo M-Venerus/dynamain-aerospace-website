@@ -65,7 +65,7 @@ body {
 
 main {
   width: 100%;
-  margin: var(--spacing-xl) 0;
+  margin: var(--spacing-xl) 0 0 0;
 }
 
 h1 {
@@ -457,6 +457,10 @@ p {
   color: var(--blue-1);
 }
 
+.col-right.staff-col-right {
+  align-items: flex-end;
+}
+
 #ame {
   max-width: 480px;
   border-radius: 40px;
@@ -688,4 +692,62 @@ p {
 .inquiry-section .col-right .card .secondary-button {
   color: var(--company-blue-2);
   padding-left: 0;
+}
+
+/* Footer Section */
+
+.footer {
+display: flex;
+justify-content: center;
+background-color: var(--bg-light);
+padding: var(--spacing-xl) 0;
+}
+
+.footer .section-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer .col {
+  width: 25%;
+}
+
+.footer-img {
+  width: 180px;
+}
+
+.footer .footer-col ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer .footer-col ul li {
+  margin: var(--spacing-sm) 0;
+}
+
+.footer .footer-col a {
+  color: var(--text-dark);
+  font-weight: 400;
+}
+
+.footer .footer-col a:hover {
+  color: var(--company-blue-1);
+  text-decoration: underline;
+}
+
+.footer .icon-link {
+  display: flex;
+  align-items: center;
+  margin: var(--spacing-sm);
+}
+
+.footer .icon-link img {
+  width: 24px;
+  margin: 0 var(--spacing-sm) 0 0;
+}
+
+.footer h4 {
+  font-size: var(--h6-size);
+  font-weight: 600;
 }
