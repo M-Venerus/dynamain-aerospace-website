@@ -36,7 +36,7 @@
   --primary-accent: #082746;
   --primary-button-hover: #6d7a88;
   --bg-white: #fff;
-  --bg-light: #f2f5f8;
+  --bg-light: #ebeff3;
   --primary-gradient: linear-gradient(
     101deg,
     #003cff 0%,
@@ -360,10 +360,11 @@ p {
 
 /* Maintenance Section */
 .maintenance-section {
-  padding: var(--spacing-lg) 0;
+  padding: var(--spacing-xl) 0 var(--spacing-md) 0;
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: var(--bg-light);
 }
 
 .maintenance-section h2 {
@@ -385,6 +386,8 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: var(--bg-light);
+  padding: 0 0 var(--spacing-xl) 0;
 }
 
 .graphic-grid {
@@ -394,7 +397,7 @@ p {
     "interior plane plane"
     "interior plane plane";
   grid-gap: var(--spacing-lg);
-  padding: var(--spacing-lg) 0;
+  padding: var(--spacing-md) 0 var(--spacing-xl) 0;
 }
 
 #engine {
@@ -432,6 +435,7 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: var(--spacing-xxxl) 0;
 }
 
 .staff-section .primary-button {
@@ -477,6 +481,7 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: var(--spacing-xxxl) 0;
 }
 .commitment-section .card-container {
   display: flex;
@@ -501,7 +506,7 @@ p {
   justify-content: center;
   color: var(--text-light);
   position: relative;
-  padding: var(--spacing-xxxl) 0;
+  padding: var(--spacing-xxxl) 0 var(--spacing-xl) 0;
 }
 
 .global-section a {
@@ -536,10 +541,10 @@ p {
 
 #globe {
   max-width: 844px;
-  opacity: 22%;
+  opacity: 12%;
   position: absolute;
-  top: -135px;
-  left: 20px;
+  top: -60px;
+  left: -220px;
 }
 
 /* Projects Section */
@@ -657,7 +662,7 @@ p {
 .inquiry-section {
   display: flex;
   justify-content: center;
-  padding: var(--spacing-xl);
+  padding: var(--spacing-lg) 0 var(--spacing-xxxl) 0;
 }
 
 .inquiry-section .primary-button {
