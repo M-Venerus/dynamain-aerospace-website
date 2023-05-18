@@ -306,6 +306,18 @@ p {
   background-color: rgba(250, 250, 250, 0.55);
 }
 
+/* Navbar Canvas */
+
+#animated-canvas {
+  background-color: purple;
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 /* Hero */
 .hero {
   width: 100%;
@@ -338,6 +350,37 @@ p {
   position: absolute;
   left: -40px;
   top: 90px;
+}
+
+.airplane-container::before {
+  content: "";
+  background: linear-gradient(120deg, #4c00ff, #0084ff,#00ffff, #00ffbf,#00ff95);
+  background-size: 800% 800%;
+	animation: gradient 6s linear infinite;
+  height: 140px;
+  width: 140px;
+  z-index: 0;
+  position: absolute;
+  left: 35px;
+  bottom: 200px; 
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+  10% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+  80% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 /* Partners Section */
@@ -481,7 +524,7 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: var(--spacing-xxxl) 0;
+  padding: var(--spacing-xxl) 0;
 }
 .commitment-section .card-container {
   display: flex;
@@ -506,7 +549,7 @@ p {
   justify-content: center;
   color: var(--text-light);
   position: relative;
-  padding: var(--spacing-xxxl) 0 var(--spacing-xl) 0;
+  padding: var(--spacing-xxl) 0 var(--spacing-lg) 0;
 }
 
 .global-section a {
