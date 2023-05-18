@@ -3,7 +3,7 @@
   --body-font: "Roboto", sans-serif;
   --heading-font: "Anek Telugu", sans-serif;
   --h1-size: 96px;
-  --h1-height: 104px;
+  --h1-height: 100px;
   --h2-size: 50px;
   --h2-height: 75px;
   --h3-size: 40px;
@@ -13,11 +13,15 @@
   --subtitle-size: 17px;
   --subtitle-height: 26px;
   --p-size: 18px;
+  --p-alt-s-size: 16px;
+  --p-alt-l-size: 20px;
   --p-height: 26px;
   --secondary-text-size: 14px;
   --secondary-text-height: 18px;
   --button-size: 16px;
   /* Spacing */
+  --spacing-xxs: 4px;
+  --spacing-xs: 6px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
   --spacing-lg: 32px;
@@ -141,6 +145,14 @@ p {
 .section-container {
   width: 100%;
   max-width: var(--width-standard);
+}
+
+.one-column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
 }
 
 .two-column {
@@ -273,10 +285,11 @@ p {
   width: 100%;
   max-width: var(--width-standard);
   padding: 0 var(--spacing-md);
+  margin: 0;
 }
 
 .mainlogo {
-  width: 165px;
+  width: 150px;
 }
 
 .menu {
@@ -290,7 +303,8 @@ p {
 .menu a {
   color: white;
   margin: 0px var(--spacing-md);
-  font-weight: bold;
+  font-weight: 500;
+  font-size: var(--p-alt-s-size);
 }
 
 .menu a:hover {
@@ -300,6 +314,7 @@ p {
 .navbar-button {
   background-color: rgba(250, 250, 250, 0.25);
   margin: 0 10px 0 60px;
+  font-size: var(--p-alt-s-size);
 }
 
 .navbar-button:hover {
@@ -309,13 +324,16 @@ p {
 /* Navbar Canvas */
 
 #animated-canvas {
-  background-color: purple;
   width: 100%;
-  height: 60px;
+  height: 148px;
   position: absolute;
-  top: 0;
+  top: -90px;
   left: 0;
   z-index: -1;
+  --gradient-color-1: #334ddd;
+  --gradient-color-2: #0dd3c9;
+  --gradient-color-3: #1fc3e0;
+  --gradient-color-4: #5e43f3;
 }
 
 /* Hero */
@@ -323,12 +341,13 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin: var(--spacing-lg) 0 0 0;
 }
 
 .button-container {
   display: flex;
   flex-direction: row;
-  margin: var(--spacing-md) 0;
+  margin: var(--spacing-sm) 0;
 }
 
 .button-container button:nth-of-type(2) {
@@ -341,46 +360,56 @@ p {
 }
 
 .hero .airplane-container {
-  height: 550px;
+  height: 340px;
   position: relative;
 }
 
 .airplane {
-  width: 640px;
+  width: 600px;
   position: absolute;
-  left: -40px;
-  top: 90px;
+  left: -20px;
+  top: 60px;
 }
 
 .airplane-container::before {
   content: "";
-  background: linear-gradient(120deg, #4c00ff, #0084ff,#00ffff, #00ffbf,#00ff95);
-  background-size: 800% 800%;
-	animation: gradient 6s linear infinite;
-  height: 140px;
-  width: 140px;
+  background: linear-gradient(120deg, #001aff, #0a6bfc,#00ccff, #1ff3d7,#1eeeb0);
+  background-size: 900% 900%;
+	animation: gradient 13s linear infinite;
+  height: 130px;
+  width: 130px;
   z-index: 0;
   position: absolute;
-  left: 35px;
-  bottom: 200px; 
+  left: 50px;
+  bottom: 40px; 
 }
 
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
 	}
-  10% {
+  15% {
 		background-position: 0% 50%;
 	}
-	50% {
+	55% {
 		background-position: 100% 50%;
 	}
-  80% {
+  90% {
 		background-position: 0% 50%;
 	}
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+/* Main Info Section*/
+.main-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: var(--spacing-xl) 0 var(--spacing-lg) 0;
+  padding: 0;
 }
 
 /* Partners Section */
@@ -393,11 +422,11 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  margin: var(--spacing-xl) var(--spacing-lg);
+  margin: var(--spacing-lg) var(--spacing-lg);
 }
 
 .partners-grid img {
-  width: 60%;
+  width: 50%;
   place-self: center;
 }
 
