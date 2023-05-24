@@ -313,7 +313,7 @@ p {
 
 .navbar-button {
   background-color: rgba(250, 250, 250, 0.25);
-  margin: 0 10px 0 60px;
+  margin: 0 10px 0 80px;
   font-size: var(--p-alt-s-size);
 }
 
@@ -324,11 +324,13 @@ p {
 /* Navbar Canvas */
 
 #animated-canvas {
-  width: 100%;
-  height: 148px;
+  width: 200%;
+  height: 1000px;
+  transform: rotate(-7deg);
   position: absolute;
-  top: -90px;
-  left: 0;
+  transform: translateZ(2);
+  top: -720px;
+  left: -50%;
   z-index: -1;
   --gradient-color-1: #334ddd;
   --gradient-color-2: #0dd3c9;
@@ -366,39 +368,40 @@ p {
 
 .airplane {
   width: 600px;
+  transform: rotate(-4deg);
   position: absolute;
-  left: -20px;
-  top: 60px;
+  left: -30px;
+  top: 54px;
 }
 
 .airplane-container::before {
   content: "";
-  background: linear-gradient(120deg, #001aff, #0a6bfc,#00ccff, #1ff3d7,#1eeeb0);
+  background: linear-gradient(120deg, #4c00ff, #0a57fc,#00ccff, #1fecf3,#1eeeee);
   background-size: 900% 900%;
-	animation: gradient 13s linear infinite;
+	animation: gradient 16s linear infinite;
   height: 130px;
   width: 130px;
   z-index: 0;
   position: absolute;
   left: 50px;
-  bottom: 40px; 
+  bottom: 26px; 
 }
 
 @keyframes gradient {
 	0% {
-		background-position: 0% 50%;
-	}
-  15% {
-		background-position: 0% 50%;
-	}
-	55% {
 		background-position: 100% 50%;
 	}
-  90% {
+  15% {
+		background-position: 50% 50%;
+	}
+	55% {
 		background-position: 0% 50%;
 	}
+  90% {
+		background-position: 50% 50%;
+	}
 	100% {
-		background-position: 0% 50%;
+		background-position: 100% 50%;
 	}
 }
 
