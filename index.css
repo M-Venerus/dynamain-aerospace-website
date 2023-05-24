@@ -746,7 +746,6 @@ p {
 
 .inquiry-section .primary-button:hover {
   background-color: var(--primary-accent);
-  margin: var(--spacing-md) 0;
 }
 
 .inquiry-section .col-left {
