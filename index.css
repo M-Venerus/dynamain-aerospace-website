@@ -339,9 +339,9 @@ p {
   transform: translateZ(2);
   top: -720px;
   z-index: -1;
-  --gradient-color-1: #27d9e6;
-  --gradient-color-2: #19a9eb;
-  --gradient-color-3: #3446eb;
+  --gradient-color-1: #3446eb;
+  --gradient-color-2: #27d9e6;
+  --gradient-color-3: #19a9eb;
   --gradient-color-4: #473ce7;
 }
 
@@ -427,7 +427,7 @@ p {
   content: "";
   background: linear-gradient(120deg, #4c00ff, #0050fd,#00ccff, #00f2fa,#00ffff);
   background-size: 900% 900%;
-	animation: gradient 14s linear infinite;
+	animation: gradient 16s linear infinite;
   height: 130px;
   width: 130px;
   z-index: 0;
