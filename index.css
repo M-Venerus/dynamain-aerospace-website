@@ -339,10 +339,10 @@ p {
   transform: translateZ(2);
   top: -720px;
   z-index: -1;
-  --gradient-color-1: #334ddd;
-  --gradient-color-2: #0dd3c9;
-  --gradient-color-3: #1fc3e0;
-  --gradient-color-4: #5e43f3;
+  --gradient-color-1: #27d9e6;
+  --gradient-color-2: #19a9eb;
+  --gradient-color-3: #3446eb;
+  --gradient-color-4: #473ce7;
 }
 
 /* Hero */
@@ -371,7 +371,7 @@ p {
 .dynamic {
     background: linear-gradient(145deg, #000,#000, #002df7,#feffff, #33e951,#ee8802,#aa30fc,#ffffff,#000, #000);
     background-size: 1300%;
-    animation: dynamic 7.5s linear infinite ;
+    animation: dynamic 10s linear infinite ;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
@@ -383,7 +383,7 @@ p {
 	0% {
 		background-position: 0%;
 	}
-  26% {
+  28% {
 		background-position: 2%;
 	}
 	32% {
@@ -392,16 +392,16 @@ p {
   36% {
 		background-position: 38%;
 	}
-	42% {
+	40% {
 		background-position: 56%;
 	}
-  48% {
+  44% {
 		background-position: 74%;
 	}	
-  55% {
+  50% {
 		background-position: 90%;
 	}
-  65% {
+  60% {
 		background-position: 98%;
 	}
   100% {
@@ -425,9 +425,9 @@ p {
 
 .airplane-container::before {
   content: "";
-  background: linear-gradient(120deg, #4c00ff, #0a57fc,#00ccff, #1fecf3,#1eeeee);
+  background: linear-gradient(120deg, #4c00ff, #0050fd,#00ccff, #00f2fa,#00ffff);
   background-size: 900% 900%;
-	animation: gradient 16s linear infinite;
+	animation: gradient 14s linear infinite;
   height: 130px;
   width: 130px;
   z-index: 0;
