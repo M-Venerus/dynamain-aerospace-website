@@ -333,7 +333,7 @@ p {
 
 #animated-canvas {
   width: 100%;
-  height: 1000px;
+  height: 1014px;
   transform: skewY(-7deg);
   position: absolute;
   transform: translateZ(2);
@@ -368,6 +368,44 @@ p {
   max-width: 430px;
 }
 
+.dynamic {
+    background: linear-gradient(145deg, #000,#000, #002df7,#feffff, #33e951,#ee8802,#aa30fc,#ffffff,#000, #000);
+    background-size: 1300%;
+    animation: dynamic 7.5s linear infinite ;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+@keyframes dynamic {
+	0% {
+		background-position: 0%;
+	}
+  26% {
+		background-position: 2%;
+	}
+	32% {
+		background-position: 15%;
+	}
+  36% {
+		background-position: 38%;
+	}
+	42% {
+		background-position: 56%;
+	}
+  48% {
+		background-position: 74%;
+	}	
+  55% {
+		background-position: 98%;
+	}
+  100% {
+		background-position: 100%;
+	}
+}
+
 .hero .airplane-container {
   height: 340px;
   position: relative;
@@ -379,6 +417,7 @@ p {
   position: absolute;
   left: -30px;
   top: 54px;
+  z-index: 2;
 }
 
 .airplane-container::before {
@@ -410,6 +449,17 @@ p {
 	100% {
 		background-position: 100% 50%;
 	}
+}
+
+.hero::after {
+  content: "";
+  width: 100%;
+  height: 20px;
+  transform: skewY(-7deg);
+  background-color: var(--bg-white);
+  position: absolute;
+  z-index: -1;
+  top: 290px;
 }
 
 /* Main Info Section*/
