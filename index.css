@@ -277,6 +277,14 @@ p {
   transform: translateX(5px);
 }
 
+.button-link {
+  display: flex;
+}
+
+.inline-block-link {
+  display: inline-block;
+}
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -324,13 +332,12 @@ p {
 /* Navbar Canvas */
 
 #animated-canvas {
-  width: 200%;
+  width: 100%;
   height: 1000px;
-  transform: rotate(-7deg);
+  transform: skewY(-7deg);
   position: absolute;
   transform: translateZ(2);
   top: -720px;
-  left: -50%;
   z-index: -1;
   --gradient-color-1: #334ddd;
   --gradient-color-2: #0dd3c9;
@@ -352,7 +359,7 @@ p {
   margin: var(--spacing-sm) 0;
 }
 
-.button-container button:nth-of-type(2) {
+.button-container .button-link button {
   margin: 0 0 0 var(--spacing-md);
   color: var(--company-blue-2);
 }
