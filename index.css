@@ -3,6 +3,7 @@
   --body-font: "Roboto", sans-serif;
   --heading-font: "Anek Telugu", sans-serif;
   --h1-size: 96px;
+  --h1-size-alt: 90px;
   --h1-height: 100px;
   --h2-size: 50px;
   --h2-height: 75px;
@@ -485,7 +486,9 @@ p {
 }
 
 .main-info-subpage h1 {
-  color: var(--bg-white);
+  color: #fff;
+  text-shadow: 3px 3px 4px #00151f83 ;
+  font-size: var(--h1-size-alt);
 }
 
 .main-info-subpage::after {
