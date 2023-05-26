@@ -868,4 +868,4 @@ class Gradient {
  * Gradient.updateFrequency(freq)
  */
 var gradient = new Gradient();
-gradient.initGradient("#animated-canvas");
+gradient.initGradient(".animated-canvas");
