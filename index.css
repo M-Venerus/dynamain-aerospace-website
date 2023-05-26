@@ -502,6 +502,10 @@ p {
   top: 290px;
 }
 
+.temporary {
+  margin: 100px 0 0 0;
+}
+
 /* Partners Section */
 .partners-section {
   width: 100%;
