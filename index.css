@@ -38,10 +38,14 @@
   --company-blue-1: #317df0;
   --company-blue-2: #003cff;
   --blue-1: #00eeff;
-  --primary-accent: #082746;
+  --initial-accent: rgb(23, 82, 160);
+  --mid-accent: #0f2e57;
+  --primary-accent: #031629;
   --primary-button-hover: #6d7a88;
   --bg-white: #fff;
-  --bg-light: #ebeff3;
+  --bg-light: #eaeff3;
+  --bg-light-dark: #eef0f5;
+  --bg-light-darker: #efeff3;
   --primary-gradient: linear-gradient(
     101deg,
     #003cff 0%,
@@ -50,7 +54,7 @@
     #65f0fa 100%
   );
 
-  --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
+  --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.205);
   --heavy-box-shadow: 4px 4px 26px rgba(0, 0, 0, 0.5);
 }
 
@@ -552,8 +556,8 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: var(--bg-light);
-  padding: 0 0 var(--spacing-xl) 0;
+  background-image: linear-gradient(var(--bg-light), var(--bg-light-dark), var(--bg-light-darker));
+  padding: 0 0 var(--spacing-lg) 0;
 }
 
 .graphic-grid {
@@ -597,7 +601,7 @@ p {
 /* Staff Section */
 .staff-section {
   color: var(--text-light);
-  background-color: var(--primary-accent);
+  background-image: linear-gradient(var(--initial-accent), var(--mid-accent), var(--primary-accent));
   width: 100%;
   display: flex;
   justify-content: center;
@@ -634,12 +638,14 @@ p {
 #ame {
   max-width: 480px;
   border-radius: 40px;
+  box-shadow: 5px 5px 20px #000000a8;
 }
 
 #tools {
   max-width: 480px;
   margin: var(--spacing-lg) 0 0 0;
   border-radius: 40px;
+  box-shadow: 5px 5px 20px #000000a8;
 }
 
 /* Our Commitment Section */
@@ -666,7 +672,7 @@ p {
 
 /* Global Section */
 .global-section {
-  background-color: var(--primary-accent);
+  background-image: linear-gradient(var(--initial-accent), var(--mid-accent), var(--primary-accent));
   width: 100%;
   display: flex;
   justify-content: center;
@@ -718,7 +724,7 @@ p {
 .projects-section {
   display: flex;
   justify-content: center;
-  padding: var(--spacing-xxxl) 0;
+  padding: var(--spacing-xxl) 0;
 }
 
 .projects-section .primary-button {
@@ -771,22 +777,22 @@ p {
   border: 6px solid var(--bg-white);
 }
 
-.project-photos-section .project-photos:nth-of-type(1) {
+.project-photos-section .project-photos-1 {
   bottom: -60px;
   left: 30px;
 }
 
-.project-photos-section .project-photos:nth-of-type(2) {
+.project-photos-section .project-photos-2 {
   bottom: -52px;
   left: 145px;
 }
 
-.project-photos-section .project-photos:nth-of-type(3) {
+.project-photos-section .project-photos-3 {
   bottom: -44px;
   left: 260px;
 }
 
-.project-photos-section .project-photos:nth-of-type(4) {
+.project-photos-section .project-photos-4 {
   bottom: -36px;
   left: 375px;
 }
