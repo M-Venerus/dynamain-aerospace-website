@@ -338,7 +338,7 @@ p {
 
 .animated-canvas {
   width: 100%;
-  height: 1014px;
+  height: 1018px;
   transform: skewY(-7deg);
   position: absolute;
   transform: translateZ(2);
@@ -467,7 +467,7 @@ p {
   background-color: var(--bg-white);
   position: absolute;
   z-index: -1;
-  top: 290px;
+  top: 293px;
 }
 
 /* Main Info Section*/
@@ -478,6 +478,10 @@ p {
   justify-content: center;
   margin: var(--spacing-xl) 0 var(--spacing-lg) 0;
   padding: 0;
+}
+
+.main-info .primary-button{
+background-color: var(--mid-accent);
 }
 
 .main-info-subpage {
@@ -503,7 +507,7 @@ p {
   background-color: var(--bg-white);
   position: absolute;
   z-index: -1;
-  top: 290px;
+  top: 293px;
 }
 
 .temporary {
