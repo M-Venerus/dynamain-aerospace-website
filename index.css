@@ -420,7 +420,7 @@ p {
   width: 600px;
   transform: rotate(-4deg);
   position: absolute;
-  left: -30px;
+  right: 2px;
   top: 54px;
   z-index: 2;
 }
@@ -434,7 +434,7 @@ p {
   width: 130px;
   z-index: 0;
   position: absolute;
-  left: 50px;
+  right: 392px;
   bottom: 26px; 
 }
 
@@ -927,4 +927,23 @@ padding: var(--spacing-xl) 0;
 .footer h4 {
   font-size: var(--h6-size);
   font-weight: 600;
+}
+
+
+/* Responsiveness */
+@media only screen and (max-width: 1200px) {
+  .section-container{
+    padding: 0 var(--spacing-md);
+  }
+}
+
+
+/* Tablet */
+@media only screen and (max-width: 768px){
+
+}
+
+/* Mobile */
+@media only screen and (max-width: 550px){
+
 }
