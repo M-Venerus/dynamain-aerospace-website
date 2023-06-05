@@ -2,6 +2,7 @@
   /* Fonts-fam and Sizes */
   --body-font: "Roboto", sans-serif;
   --heading-font: "Anek Telugu", sans-serif;
+  --heading-font-alt: "Audiowide", cursive;
   --h1-size: 96px;
   --h1-size-alt: 90px;
   --h1-height: 100px;
@@ -82,6 +83,17 @@ h1 {
   font-size: var(--h1-size);
   line-height: var(--h1-height);
   font-weight: 600;
+  margin: 0;
+  width: 100%;
+  letter-spacing: -1px;
+}
+
+.alt {
+  /* Alternate H1 Styling (New style for testing) */
+  font-family: var(--heading-font-alt);
+  font-size: 80px;
+  line-height: var(--h1-height);
+  font-weight: 400;
   margin: 0;
   width: 100%;
   letter-spacing: -1px;
@@ -374,7 +386,7 @@ p {
 }
 
 .dynamic {
-    background: linear-gradient(145deg, #000,#000, #002df7,#feffff, #33e951,#ee8802,#aa30fc,#ffffff,#000, #000);
+    background: linear-gradient(145deg, #000,#000,#ffffff,#000, #000);
     background-size: 1300%;
     animation: dynamic 10s linear infinite ;
     -webkit-background-clip: text;
@@ -390,21 +402,6 @@ p {
 	}
   28% {
 		background-position: 2%;
-	}
-	32% {
-		background-position: 15%;
-	}
-  36% {
-		background-position: 38%;
-	}
-	40% {
-		background-position: 56%;
-	}
-  44% {
-		background-position: 74%;
-	}	
-  50% {
-		background-position: 90%;
 	}
   60% {
 		background-position: 98%;
