@@ -1032,11 +1032,46 @@ p {
     left: -440px;
     bottom: -90px;
   }
+
+  .staff-section .col-left {
+    width: 55%;
+  }
+
+  .staff-section .col-right {
+    width: 45%;
+  }
+
+  #ame {
+    max-width: 350px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px #000000a8;
+    margin: var(--spacing-xl) 0 0 0;
+  }
+  
+  #tools {
+    max-width: 350px;
+    margin: var(--spacing-xl) 0 0 0;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px #000000a8;
+  }
 }
 
 @media only screen and (max-width: 850px) {
   .partners-grid img {
     width: 65%;
+  }
+  #ame {
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #000000a8;
+    margin: var(--spacing-xxl) 0 0 0;
+  }
+  
+  #tools {
+    max-width: 300px;
+    margin: var(--spacing-xl) 0 0 0;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #000000a8;
   }
 }
 
