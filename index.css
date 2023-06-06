@@ -694,6 +694,7 @@ p {
   color: var(--text-light);
   position: relative;
   padding: var(--spacing-xxl) 0 var(--spacing-lg) 0;
+  overflow: hidden;
 }
 
 .global-section a {
