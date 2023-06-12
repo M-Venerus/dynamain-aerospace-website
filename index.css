@@ -1172,6 +1172,7 @@ p {
 
 
 html, body {
+  /* This code makes sure the users cannot scroll horizontally on smaller screens. Overflow will be cutoff */
   width: 100%;
   position: relative;
   overflow-x: hidden;
