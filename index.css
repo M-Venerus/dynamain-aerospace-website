@@ -1103,6 +1103,32 @@ p {
     border-radius: 30px;
     box-shadow: var(--standard-box-shadow);
   }
+
+  .staff-section .card-container {
+    flex-direction: column;
+  }
+
+  .staff-section .card-container .card {
+    width: 100%;
+  }
+
+  .staff-section .col-right {
+    display: none;
+  }
+
+  .staff-section .col-left{
+    width: 100%;
+  }
+
+  .commitment-section .card-container {
+    flex-wrap: wrap;
+  }
+
+  .commitment-section .card-container .card {
+    width: 50%;
+    box-sizing: border-box;
+    margin: var(--spacing-md) 0;
+  }
 }
 
 /* Mobile */
@@ -1136,4 +1162,17 @@ p {
   .graphics-img {
     border-radius: 24px;
   }
+
+  .commitment-section .card-container .card {
+    width: 100%;
+    margin: var(--spacing-md) 0;
+    box-sizing: border-box;
+  }
+}
+
+
+html, body {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
 }
