@@ -950,6 +950,10 @@ p {
 
 /* Responsiveness */
 @media only screen and (max-width: 1200px) {
+  :root {
+    --h1-size: 86px;
+  }
+
   .section-container {
     padding: 0 var(--spacing-md);
   }
@@ -965,13 +969,14 @@ p {
     bottom: 76px;
     transform: skewY(-10deg);
   }
-
-  :root {
-    --h1-size: 86px;
-  }
 }
 
 @media only screen and (max-width: 1040px) {
+  :root {
+    --h1-size: 80px;
+    --h1-height: 80px;
+  }
+
   .hero .two-column {
     flex-direction: column;
     justify-content: center;
@@ -994,8 +999,6 @@ p {
   .hero .col-left h1 {
     text-align: center;
     margin: 0;
-    font-size: 80px;
-    line-height: 80px;
   }
 
   .animated-canvas {
@@ -1014,23 +1017,45 @@ p {
     top: 216px;
   }
 
+  .col-right.airplane-container {
+    display: flex;
+    flex-direction: column;
+  }
+
   .airplane {
     width: 540px;
     transform: rotate(0deg);
     position: relative;
     z-index: 2;
-    left: 40px;
+    left: -20px;
   }
 
   .airplane-container::after {
-    display: flex;
-    height: 120px;
-    width: 150px;
-    z-index: 0;
+    display: none;
+  }
+  
+  .airplane-tail {
     position: relative;
+    display: inline-block;
+    height: 122px;
+    width: 134px;
+    top: -140px;
+    left: -160px;
     transform: skewY(-7deg);
-    left: -440px;
-    bottom: -90px;
+    background: linear-gradient(
+      120deg,
+      #4c00ff,
+      #0050fd,
+      #00ccff,
+      #00f2fa,
+      #00ffff
+    );
+    background-size: 900% 900%;
+    animation: gradient 16s linear infinite;
+  }
+
+  .main-info {
+    margin-top: -70px;
   }
 
   .staff-section .col-left {
@@ -1057,6 +1082,11 @@ p {
 }
 
 @media only screen and (max-width: 850px) {
+  :root {
+    --h1-size: 70px;
+    --h1-height: 70px;
+  }
+
   .partners-grid img {
     width: 65%;
   }
@@ -1078,9 +1108,36 @@ p {
 /* Tablet */
 @media only screen and (max-width: 768px) {
   :root {
-    --h1-size: 64px;
-    --h1-height: 72px;
+    --h1-size: 62px;
+    --h1-height: 60px;
     --h3-size: 34px;
+  }
+
+  .two-column .col-right.airplane-container {
+    padding: 0;
+    width: 100%;
+  }
+
+  .airplane {
+    width: 86%;
+    left: none;
+    position: normal;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+  }
+
+  .airplane-tail {
+    position: relative;
+    display: inline-block;
+    height: 128px;
+    width: 150px;
+    top: -144px;
+    left: -180px;
+  }
+
+  .airplane-container::after {
+    display: none;
   }
 
   .partners-grid img {
@@ -1131,8 +1188,58 @@ p {
   }
 }
 
+@media only screen and (max-width: 680px) {
+  .airplane-tail {
+    position: relative;
+    display: inline-block;
+    height: 118px;
+    width: 124px;
+    top: -142px;
+    left: -164px;
+  }
+}
+
+@media only screen and (max-width: 634px) {
+    main {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .airplane-tail {
+    position: relative;
+    display: inline-block;
+    height: 108px;
+    width: 124px;
+    top: -140px;
+    left: -140px;
+  }
+
+  .col-right.airplane-container {
+    margin-top: -30px;
+  }
+}
+
 /* Mobile */
 @media only screen and (max-width: 550px) {
+  main {
+    margin-top: 20px;
+  }
+  
+  .airplane {
+    width: 97%;
+    left: 0px;
+  }
+
+  .airplane-tail {
+    position: relative;
+    display: inline-block;
+    height: 98px;
+    width: 114px;
+    top: -138px;
+    left: -130px;
+  }
+
   .two-column {
     flex-direction: column;
   }
@@ -1176,4 +1283,37 @@ html, body {
   width: 100%;
   position: relative;
   overflow-x: hidden;
+}
+
+@media only screen and (max-width: 450px) {
+  .airplane-tail {
+    position: relative;
+    display: inline-block;
+    height: 86px;
+    width: 114px;
+    top: -136px;
+    left: -96px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .airplane-tail {
+    position: relative;
+    display: inline-block;
+    height: 77px;
+    width: 110px;
+    top: -134px;
+    left: -90px;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  .airplane-tail {
+    position: relative;
+    display: inline-block;
+    height: 70px;
+    width: 100px;
+    top: -132px;
+    left: -80px;
+  }
 }
