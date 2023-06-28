@@ -1079,6 +1079,11 @@ p {
     border-radius: 30px;
     box-shadow: 5px 5px 20px #000000a8;
   }
+
+  .staff-section {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+  }
 }
 
 @media only screen and (max-width: 850px) {
@@ -1154,6 +1159,7 @@ p {
 
   .graphic-grid {
     grid-gap: var(--spacing-md);
+    padding-bottom: var(--spacing-lg);
   }
 
   .graphics-img {
@@ -1167,6 +1173,15 @@ p {
 
   .staff-section .card-container .card {
     width: 100%;
+  }
+
+  .staff-section .card-container .card p {
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .staff-section .card-container .card .icon {
+    margin-top: var(--spacing-lg);
   }
 
   .staff-section .col-right {
@@ -1277,12 +1292,20 @@ p {
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .graphic-grid {
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-md);
+  }
 
-html, body {
-  /* This code makes sure the users cannot scroll horizontally on smaller screens. Overflow will be cutoff */
-  width: 100%;
-  position: relative;
-  overflow-x: hidden;
+  .staff-section {
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+  }
+
+  .staff-section .card-container {
+    margin-top: var(--spacing-sm);
+  }
 }
 
 @media only screen and (max-width: 450px) {
@@ -1316,4 +1339,11 @@ html, body {
     top: -132px;
     left: -80px;
   }
+}
+
+html, body {
+  /* This code makes sure the users cannot scroll horizontally on smaller screens. Overflow will be cutoff */
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
 }
