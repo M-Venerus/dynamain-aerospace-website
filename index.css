@@ -1084,6 +1084,28 @@ p {
     padding-top: var(--spacing-xl);
     padding-bottom: var(--spacing-xl);
   }
+
+  .global-section .two-column {
+    flex-direction: column;
+  }
+
+  .global-section .two-column .col-left {
+    width: 100%;
+  }
+
+  .global-section .two-column .col-right {
+    width: 100%;
+    padding: 0;
+  }
+
+  #globe {
+    max-width: 844px;
+    opacity: 10%;
+    position: absolute;
+    top: -300px;
+    left: 40px;
+  }
+
 }
 
 @media only screen and (max-width: 850px) {
@@ -1115,6 +1137,18 @@ p {
 
   .commitment-section .card-container .card {
     padding: 0 var(--spacing-sm) 0 0;
+  }
+
+  #globe {
+    max-width: 844px;
+    opacity: 10%;
+    position: absolute;
+    top: -360px;
+    left: -60px;
+  }
+
+  .global-section {
+    padding: var(--spacing-xxl) 0 var(--spacing-md) 0;
   }
 }
 
@@ -1225,6 +1259,18 @@ p {
     top: -142px;
     left: -164px;
   }
+
+  #globe {
+    max-width: 844px;
+    opacity: 10%;
+    position: absolute;
+    top: -360px;
+    left: -140px;
+  }
+
+  .global-section {
+    padding: var(--spacing-xl) 0 var(--spacing-sm) 0;
+  }
 }
 
 @media only screen and (max-width: 634px) {
@@ -1310,6 +1356,18 @@ p {
   .commitment-section .card-container .card p {
     margin: var(--spacing-sm) 0;
   }
+
+  #globe {
+    max-width: 660px;
+    opacity: 10%;
+    position: absolute;
+    top: -20px;
+    left: -120px;
+  }
+
+  .global-section {
+    padding: var(--spacing-xl) 0 0 0;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -1336,6 +1394,23 @@ p {
     width: 114px;
     top: -136px;
     left: -96px;
+  }
+
+  .global-section .col-left {
+    padding-left: var(--spacing-md);
+  }
+
+  .global-section .card-container {
+    padding: 0 var(--spacing-md);
+    margin: 80px 0; 
+  }
+
+  #globe {
+    max-width: 620px;
+    opacity: 10%;
+    position: absolute;
+    top: 0px;
+    left: -110px;
   }
 }
 
