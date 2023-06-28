@@ -2,6 +2,7 @@
   /* Fonts-fam and Sizes */
   --body-font: "Roboto", sans-serif;
   --heading-font: "Anek Telugu", sans-serif;
+  --heading-font-alt: "Audiowide", cursive;
   --h1-size: 96px;
   --h1-size-alt: 90px;
   --h1-height: 100px;
@@ -82,6 +83,17 @@ h1 {
   font-size: var(--h1-size);
   line-height: var(--h1-height);
   font-weight: 600;
+  margin: 0;
+  width: 100%;
+  letter-spacing: -1px;
+}
+
+.alt {
+  /* Alternate H1 Styling (New style for testing) */
+  font-family: var(--heading-font-alt);
+  font-size: 80px;
+  line-height: var(--h1-height);
+  font-weight: 400;
   margin: 0;
   width: 100%;
   letter-spacing: -1px;
@@ -350,6 +362,18 @@ p {
   --gradient-color-4: #473ce7;
 }
 
+.hero::after {
+  /* White bar to make jagged edges on animated-canvas smooth */
+  content: "";
+  width: 100%;
+  height: 20px;
+  transform: skewY(-7deg);
+  background-color: var(--bg-white);
+  position: absolute;
+  z-index: -1;
+  top: 293px;
+}
+
 /* Hero */
 .hero {
   width: 100%;
@@ -374,44 +398,29 @@ p {
 }
 
 .dynamic {
-    background: linear-gradient(145deg, #000,#000, #002df7,#feffff, #33e951,#ee8802,#aa30fc,#ffffff,#000, #000);
-    background-size: 1300%;
-    animation: dynamic 10s linear infinite ;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+  background: linear-gradient(145deg, #000, #000, #ffffff, #000, #000);
+  background-size: 1300%;
+  animation: dynamic 10s linear infinite;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 
 @keyframes dynamic {
-	0% {
-		background-position: 0%;
-	}
+  0% {
+    background-position: 0%;
+  }
   28% {
-		background-position: 2%;
-	}
-	32% {
-		background-position: 15%;
-	}
-  36% {
-		background-position: 38%;
-	}
-	40% {
-		background-position: 56%;
-	}
-  44% {
-		background-position: 74%;
-	}	
-  50% {
-		background-position: 90%;
-	}
+    background-position: 40%;
+  }
   60% {
-		background-position: 98%;
-	}
+    background-position: 98%;
+  }
   100% {
-		background-position: 100%;
-	}
+    background-position: 100%;
+  }
 }
 
 .hero .airplane-container {
@@ -423,51 +432,47 @@ p {
   width: 600px;
   transform: rotate(-4deg);
   position: absolute;
-  left: -30px;
+  right: 2px;
   top: 54px;
   z-index: 2;
 }
 
-.airplane-container::before {
+.airplane-container::after {
   content: "";
-  background: linear-gradient(120deg, #4c00ff, #0050fd,#00ccff, #00f2fa,#00ffff);
+  background: linear-gradient(
+    120deg,
+    #4c00ff,
+    #0050fd,
+    #00ccff,
+    #00f2fa,
+    #00ffff
+  );
   background-size: 900% 900%;
-	animation: gradient 16s linear infinite;
+  animation: gradient 16s linear infinite;
   height: 130px;
   width: 130px;
   z-index: 0;
   position: absolute;
-  left: 50px;
-  bottom: 26px; 
+  right: 392px;
+  bottom: 26px;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 100% 50%;
-	}
+  0% {
+    background-position: 100% 50%;
+  }
   15% {
-		background-position: 50% 50%;
-	}
-	55% {
-		background-position: 0% 50%;
-	}
+    background-position: 50% 50%;
+  }
+  55% {
+    background-position: 0% 50%;
+  }
   90% {
-		background-position: 50% 50%;
-	}
-	100% {
-		background-position: 100% 50%;
-	}
-}
-
-.hero::after {
-  content: "";
-  width: 100%;
-  height: 20px;
-  transform: skewY(-7deg);
-  background-color: var(--bg-white);
-  position: absolute;
-  z-index: -1;
-  top: 293px;
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Main Info Section*/
@@ -480,8 +485,8 @@ p {
   padding: 0;
 }
 
-.main-info .primary-button{
-background-color: var(--mid-accent);
+.main-info .primary-button {
+  background-color: var(--mid-accent);
 }
 
 .main-info-subpage {
@@ -495,7 +500,7 @@ background-color: var(--mid-accent);
 
 .main-info-subpage h1 {
   color: #fff;
-  text-shadow: 3px 3px 4px #00151f83 ;
+  text-shadow: 3px 3px 4px #00151f83;
   font-size: var(--h1-size-alt);
 }
 
@@ -560,7 +565,11 @@ background-color: var(--mid-accent);
   width: 100%;
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(var(--bg-light), var(--bg-light-dark), var(--bg-light-darker));
+  background-image: linear-gradient(
+    var(--bg-light),
+    var(--bg-light-dark),
+    var(--bg-light-darker)
+  );
   padding: 0 0 var(--spacing-lg) 0;
 }
 
@@ -576,27 +585,21 @@ background-color: var(--mid-accent);
 
 #engine {
   grid-area: engine;
-  width: 100%;
-  border-radius: 40px;
-  box-shadow: var(--heavy-box-shadow);
 }
 
 #ecam {
   grid-area: ecam;
-  width: 100%;
-  border-radius: 40px;
-  box-shadow: var(--heavy-box-shadow);
 }
 
 #airplane {
   grid-area: plane;
-  width: 100%;
-  border-radius: 40px;
-  box-shadow: var(--heavy-box-shadow);
 }
 
 #interior {
   grid-area: interior;
+}
+
+.graphics-img {
   width: 100%;
   border-radius: 40px;
   box-shadow: var(--heavy-box-shadow);
@@ -605,7 +608,11 @@ background-color: var(--mid-accent);
 /* Staff Section */
 .staff-section {
   color: var(--text-light);
-  background-image: linear-gradient(var(--initial-accent), var(--mid-accent), var(--primary-accent));
+  background-image: linear-gradient(
+    var(--initial-accent),
+    var(--mid-accent),
+    var(--primary-accent)
+  );
   width: 100%;
   display: flex;
   justify-content: center;
@@ -676,13 +683,18 @@ background-color: var(--mid-accent);
 
 /* Global Section */
 .global-section {
-  background-image: linear-gradient(var(--initial-accent), var(--mid-accent), var(--primary-accent));
+  background-image: linear-gradient(
+    var(--initial-accent),
+    var(--mid-accent),
+    var(--primary-accent)
+  );
   width: 100%;
   display: flex;
   justify-content: center;
   color: var(--text-light);
   position: relative;
   padding: var(--spacing-xxl) 0 var(--spacing-lg) 0;
+  overflow: hidden;
 }
 
 .global-section a {
@@ -743,6 +755,10 @@ background-color: var(--mid-accent);
 .projects-section .col-left {
   height: 430px;
   padding: 0 var(--spacing-xl) 0 0;
+}
+
+.projects-section .col-right {
+  align-items: flex-end;
 }
 
 .projects-card {
@@ -877,10 +893,10 @@ background-color: var(--mid-accent);
 /* Footer Section */
 
 .footer {
-display: flex;
-justify-content: center;
-background-color: var(--bg-light);
-padding: var(--spacing-xl) 0;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-light);
+  padding: var(--spacing-xl) 0;
 }
 
 .footer .section-container {
@@ -930,4 +946,374 @@ padding: var(--spacing-xl) 0;
 .footer h4 {
   font-size: var(--h6-size);
   font-weight: 600;
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 1200px) {
+  :root {
+    --h1-size: 86px;
+  }
+
+  .section-container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .airplane {
+    width: 500px;
+  }
+
+  .airplane-container::after {
+    height: 110px;
+    width: 110px;
+    right: 326px;
+    bottom: 76px;
+    transform: skewY(-10deg);
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  :root {
+    --h1-size: 80px;
+    --h1-height: 80px;
+  }
+
+  .hero .two-column {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero .col-left {
+    width: 100%;
+  }
+
+  .hero .col-right {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 220px;
+    margin: 0 0 var(--spacing-xl) 0;
+  }
+
+  .hero .col-left h1 {
+    text-align: center;
+    margin: 0;
+  }
+
+  .animated-canvas {
+    width: 100%;
+    top: -796px;
+    transform: skewY(-4deg);
+  }
+
+  main {
+    margin: var(--spacing-xl) 0 0 0;
+  }
+
+  .hero::after {
+    height: 20px;
+    transform: skewY(-4deg);
+    top: 216px;
+  }
+
+  .col-right.airplane-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .airplane {
+    width: 540px;
+    transform: rotate(0deg);
+    position: relative;
+    z-index: 2;
+    left: -20px;
+  }
+
+  .airplane-container::after {
+    display: none;
+  }
+  
+  .airplane-tail {
+    position: relative;
+    display: inline-block;
+    height: 122px;
+    width: 134px;
+    top: -140px;
+    left: -160px;
+    transform: skewY(-7deg);
+    background: linear-gradient(
+      120deg,
+      #4c00ff,
+      #0050fd,
+      #00ccff,
+      #00f2fa,
+      #00ffff
+    );
+    background-size: 900% 900%;
+    animation: gradient 16s linear infinite;
+  }
+
+  .main-info {
+    margin-top: -70px;
+  }
+
+  .staff-section .col-left {
+    width: 55%;
+  }
+
+  .staff-section .col-right {
+    width: 45%;
+  }
+
+  #ame {
+    max-width: 350px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px #000000a8;
+    margin: var(--spacing-xl) 0 0 0;
+  }
+  
+  #tools {
+    max-width: 350px;
+    margin: var(--spacing-xl) 0 0 0;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px #000000a8;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  :root {
+    --h1-size: 70px;
+    --h1-height: 70px;
+  }
+
+  .partners-grid img {
+    width: 65%;
+  }
+  #ame {
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #000000a8;
+    margin: var(--spacing-xxl) 0 0 0;
+  }
+  
+  #tools {
+    max-width: 300px;
+    margin: var(--spacing-xl) 0 0 0;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #000000a8;
+  }
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  :root {
+    --h1-size: 62px;
+    --h1-height: 60px;
+    --h3-size: 34px;
+  }
+
+  .two-column .col-right.airplane-container {
+    padding: 0;
+    width: 100%;
+  }
+
+  .airplane {
+    width: 86%;
+    left: none;
+    position: normal;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+  }
+
+  .airplane-tail {
+    position: relative;
+    display: inline-block;
+    height: 128px;
+    width: 150px;
+    top: -144px;
+    left: -180px;
+  }
+
+  .airplane-container::after {
+    display: none;
+  }
+
+  .partners-grid img {
+    width: 75%;
+  }
+
+  .partners-grid {
+    margin: var(--spacing-lg) 0;
+  }
+
+  .maintenance-section h2 {
+    width: 100%;
+  }
+
+  .graphic-grid {
+    grid-gap: var(--spacing-md);
+  }
+
+  .graphics-img {
+    border-radius: 30px;
+    box-shadow: var(--standard-box-shadow);
+  }
+
+  .staff-section .card-container {
+    flex-direction: column;
+  }
+
+  .staff-section .card-container .card {
+    width: 100%;
+  }
+
+  .staff-section .col-right {
+    display: none;
+  }
+
+  .staff-section .col-left{
+    width: 100%;
+  }
+
+  .commitment-section .card-container {
+    flex-wrap: wrap;
+  }
+
+  .commitment-section .card-container .card {
+    width: 50%;
+    box-sizing: border-box;
+    margin: var(--spacing-md) 0;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .airplane-tail {
+    position: relative;
+    display: inline-block;
+    height: 118px;
+    width: 124px;
+    top: -142px;
+    left: -164px;
+  }
+}
+
+@media only screen and (max-width: 634px) {
+    main {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .airplane-tail {
+    position: relative;
+    display: inline-block;
+    height: 108px;
+    width: 124px;
+    top: -140px;
+    left: -140px;
+  }
+
+  .col-right.airplane-container {
+    margin-top: -30px;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 550px) {
+  main {
+    margin-top: 20px;
+  }
+  
+  .airplane {
+    width: 97%;
+    left: 0px;
+  }
+
+  .airplane-tail {
+    position: relative;
+    display: inline-block;
+    height: 98px;
+    width: 114px;
+    top: -138px;
+    left: -130px;
+  }
+
+  .two-column {
+    flex-direction: column;
+  }
+
+  .two-column .col-left {
+    width: 100%;
+  }
+
+  .two-column .col-right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .partners-grid {
+    grid-template-columns: 1fr 1fr;
+    margin: var(--spacing-lg) 0;
+  }
+
+  .partners-grid img {
+    width: 120px;
+  }
+
+  .maintenance-section h2 {
+    width: 100%;
+  }
+
+  .graphics-img {
+    border-radius: 24px;
+  }
+
+  .commitment-section .card-container .card {
+    width: 100%;
+    margin: var(--spacing-md) 0;
+    box-sizing: border-box;
+  }
+}
+
+
+html, body {
+  /* This code makes sure the users cannot scroll horizontally on smaller screens. Overflow will be cutoff */
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 450px) {
+  .airplane-tail {
+    position: relative;
+    display: inline-block;
+    height: 86px;
+    width: 114px;
+    top: -136px;
+    left: -96px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .airplane-tail {
+    position: relative;
+    display: inline-block;
+    height: 77px;
+    width: 110px;
+    top: -134px;
+    left: -90px;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  .airplane-tail {
+    position: relative;
+    display: inline-block;
+    height: 70px;
+    width: 100px;
+    top: -132px;
+    left: -80px;
+  }
 }
