@@ -1033,7 +1033,7 @@ p {
   .airplane-container::after {
     display: none;
   }
-  
+
   .airplane-tail {
     position: relative;
     display: inline-block;
@@ -1072,7 +1072,7 @@ p {
     box-shadow: 5px 5px 20px #000000a8;
     margin: var(--spacing-xl) 0 0 0;
   }
-  
+
   #tools {
     max-width: 350px;
     margin: var(--spacing-xl) 0 0 0;
@@ -1106,6 +1106,23 @@ p {
     left: 40px;
   }
 
+  .projects-section {
+    padding-top: var(--spacing-md);
+  }
+
+  .projects-section .two-column {
+    flex-direction: column;
+  }
+
+  .projects-section .two-column .col-left {
+    width: 100%;
+  }
+
+  .projects-section .two-column .col-right {
+    width: 100%;
+    padding: 0;
+    align-items: center;
+  }
 }
 
 @media only screen and (max-width: 850px) {
@@ -1123,7 +1140,7 @@ p {
     box-shadow: 5px 5px 20px #000000a8;
     margin: var(--spacing-xxl) 0 0 0;
   }
-  
+
   #tools {
     max-width: 300px;
     margin: var(--spacing-xl) 0 0 0;
@@ -1214,7 +1231,8 @@ p {
   }
 
   .staff-section .card-container .card {
-    width: 100%;
+    width: 80%;
+    margin: 0 0 0 var(--spacing-md);
   }
 
   .staff-section .card-container .card p {
@@ -1226,11 +1244,15 @@ p {
     margin-top: var(--spacing-lg);
   }
 
+  .staff-section .card-container .card .secondary-button.with-icon {
+    padding: 0;
+  }
+
   .staff-section .col-right {
     display: none;
   }
 
-  .staff-section .col-left{
+  .staff-section .col-left {
     width: 100%;
   }
 
@@ -1274,7 +1296,7 @@ p {
 }
 
 @media only screen and (max-width: 634px) {
-    main {
+  main {
     margin-top: 20px;
   }
 }
@@ -1292,6 +1314,10 @@ p {
   .col-right.airplane-container {
     margin-top: -30px;
   }
+
+  .projects-section .projects-card {
+    width: 100%;
+  }
 }
 
 /* Mobile */
@@ -1299,7 +1325,7 @@ p {
   main {
     margin-top: 20px;
   }
-  
+
   .airplane {
     width: 97%;
     left: 0px;
@@ -1345,7 +1371,7 @@ p {
   }
 
   .commitment-section .card-container {
-    margin: var(--spacing-md) 0 var(--spacing-lg) 0;
+    margin: var(--spacing-sm) 0 var(--spacing-lg) 0;
   }
   .commitment-section .card-container .card {
     width: 100%;
@@ -1368,6 +1394,40 @@ p {
   .global-section {
     padding: var(--spacing-xl) 0 0 0;
   }
+
+  .projects-section {
+    padding-top: 50px;
+  }
+
+  .projects-section .col-right{
+    margin-top: var(--spacing-md)
+  }
+
+  .project-photos.project-photos-4 {
+    visibility: hidden;
+  }
+
+  .projects-card #card-logo {
+    position: relative;
+    top: -50px;
+    left: 0px;
+    align-items: center;
+  }
+
+  .project-photos-section .project-photos-1 {
+    bottom: -60px;
+    left: 60px;
+  }
+  
+  .project-photos-section .project-photos-2 {
+    bottom: -52px;
+    left: 175px;
+  }
+  
+  .project-photos-section .project-photos-3 {
+    bottom: -44px;
+    left: 290px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -1383,6 +1443,33 @@ p {
 
   .staff-section .card-container {
     margin-top: var(--spacing-sm);
+  }
+
+  .projects-section {
+    padding-top: var(--spacing-xl);
+  }
+
+  .project-photos-section .project-photos-1 {
+    bottom: -244px;
+    left: -230px;
+    position: relative;
+  }
+  
+  .project-photos-section .project-photos-2 {
+    bottom: -90px;
+    left: -120px;
+    position: relative;
+  }
+  
+  .project-photos-section .project-photos-3 {
+    bottom: 62px;
+    left: -8px;
+    position: relative;
+  }
+
+  .projects-card #card-logo {
+    top: -50px;
+    left: 90px;
   }
 }
 
@@ -1402,7 +1489,7 @@ p {
 
   .global-section .card-container {
     padding: 0 var(--spacing-md);
-    margin: 80px 0; 
+    margin: 80px 0;
   }
 
   #globe {
@@ -1411,6 +1498,34 @@ p {
     position: absolute;
     top: 0px;
     left: -110px;
+  }
+
+  .project-photos-section .project-photos-1 {
+    bottom: -238px;
+    left: -240px;
+    position: relative;
+  }
+  
+  .project-photos-section .project-photos-2 {
+    bottom: -84px;
+    left: -134px;
+    position: relative;
+  }
+  
+  .project-photos-section .project-photos-3 {
+
+    bottom: 68px;
+    left: -28px;
+    position: relative;
+  }
+
+  .projects-card #card-logo {
+    top: -50px;
+    left: 70px;
+  }
+
+  .projects-section .col-right {
+    margin-top: var(--spacing-lg);
   }
 }
 
@@ -1423,6 +1538,30 @@ p {
     top: -134px;
     left: -90px;
   }
+
+  .project-photos-section .project-photos {
+    width: 100px;
+  }
+
+  .project-photos-section .project-photos-1 {
+    bottom: -208px;
+    left: -220px;
+  }
+  
+  .project-photos-section .project-photos-2 {
+    bottom: -84px;
+    left: -134px;
+  }
+  
+  .project-photos-section .project-photos-3 {
+
+    bottom: 38px;
+    left: -42px;
+  }
+
+  .projects-section .col-right {
+    margin-top: var(--spacing-xl);
+  }
 }
 
 @media only screen and (max-width: 365px) {
@@ -1434,9 +1573,15 @@ p {
     top: -132px;
     left: -80px;
   }
+
+  .projects-section {
+    padding-top: var(--spacing-xxl);
+  }
+
 }
 
-html, body {
+html,
+body {
   /* This code makes sure the users cannot scroll horizontally on smaller screens. Overflow will be cutoff */
   width: 100%;
   position: relative;
