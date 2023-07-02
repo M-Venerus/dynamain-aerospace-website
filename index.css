@@ -311,6 +311,7 @@ p {
   max-width: var(--width-standard);
   padding: 0 var(--spacing-md);
   margin: 0;
+  box-sizing: border-box;
 }
 
 .mainlogo {
@@ -1146,6 +1147,14 @@ p {
     --h1-height: 70px;
   }
 
+  .navbar .menu {
+    display: none;
+  }
+
+  .navbar .navbar-button {
+    display: none;
+  }
+
   .partners-grid img {
     width: 65%;
   }
@@ -1491,6 +1500,18 @@ p {
 }
 
 @media only screen and (max-width: 500px) {
+  .hero .col-right.airplane-container {
+    margin-top: -70px;
+    margin-left: -10px;
+  }
+
+  .main-info .one-column {
+    margin-top: -24px;
+  }
+
+  .main-info {
+    margin-bottom: 0;
+  }
   .graphic-grid {
     padding-top: var(--spacing-sm);
     padding-bottom: var(--spacing-md);
@@ -1535,7 +1556,7 @@ p {
     height: 86px;
     width: 114px;
     top: -136px;
-    left: -96px;
+    left: -106px;
   }
 
   .global-section .col-left {
