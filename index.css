@@ -347,6 +347,10 @@ p {
   background-color: rgba(250, 250, 250, 0.55);
 }
 
+.hamburger-button {
+  display: none;
+
+}
 /* Navbar Canvas */
 
 .animated-canvas {
@@ -1155,6 +1159,28 @@ p {
     display: none;
   }
 
+  .hamburger-button {
+    width: 54px;
+    height: 32px;
+    background-color: rgba(250, 250, 250, 0.25);
+    border-radius: 18px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hamburger-button .bar {
+    width: 24px;
+    height: 3px;
+    background-color: var(--bg-white);
+    margin: 2px;
+    border-radius: 2px;
+  }
+
   .partners-grid img {
     width: 65%;
   }
@@ -1198,6 +1224,8 @@ p {
 
   .footer .footer-col {
     width: 50%;
+    padding-right: var(--spacing-lg);
+    box-sizing: border-box;
   }
 
   .footer-img {
@@ -1314,7 +1342,7 @@ p {
     display: inline-block;
     height: 118px;
     width: 124px;
-    top: -142px;
+    top: -141px;
     left: -164px;
   }
 
@@ -1359,7 +1387,16 @@ p {
 /* Mobile */
 @media only screen and (max-width: 550px) {
   main {
-    margin-top: 20px;
+    margin-top: 16px;
+  }
+
+  .navbar {
+    padding-top: 5px;
+  }
+
+  .hamburger-button {
+    margin-top: 4px;
+    margin-right: 4px;
   }
 
   .airplane {
@@ -1505,6 +1542,15 @@ p {
     margin-left: -10px;
   }
 
+  .airplane-tail {
+    position: relative;
+    display: inline-block;
+    height: 98px;
+    width: 114px;
+    top: -135px;
+    left: -120px;
+  }
+
   .main-info .one-column {
     margin-top: -24px;
   }
@@ -1602,6 +1648,11 @@ p {
   .projects-section .col-right {
     margin-top: var(--spacing-lg);
   }
+
+  .footer-img {
+    width: 160px;
+    top: -4px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -1647,6 +1698,10 @@ p {
 }
 
 @media only screen and (max-width: 365px) {
+  .hero h1 {
+    font-size: 56px;
+  }
+  
   .airplane-tail {
     position: relative;
     display: inline-block;
