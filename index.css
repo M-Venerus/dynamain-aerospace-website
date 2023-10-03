@@ -1151,8 +1151,29 @@ p {
     --h1-height: 70px;
   }
 
-  .navbar .menu {
-    display: none;
+  .menu {
+    position: fixed;
+    right: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    width: 50px;
+    text-align:left ;
+    justify-content: left;
+    background-color: rgba(79, 117, 240, 50);
+    opacity: 0.85;
+    transition: 0.3s;
+    font-size: 20px;
+  }
+
+  .navbar .menu .menu-item {
+    margin: 2px 40px 4px 0px;
+    opacity: 1;
+    font-size: 20px;
+  }
+
+  .menu.active {
+    right: 0;
   }
 
   .navbar .navbar-button {
@@ -1179,6 +1200,20 @@ p {
     background-color: var(--bg-white);
     margin: 2px;
     border-radius: 2px;
+  }
+
+  .hamburger-button.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-button.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+    transition: 0.2s;
+  }
+
+  .hamburger-button.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+    transition: 0.2s;
   }
 
   .partners-grid img {
