@@ -1073,6 +1073,10 @@ p {
     margin-top: -70px;
   }
 
+  .main-info-subpage {
+    margin-top: 20px;
+  }
+
   .staff-section .col-left {
     width: 55%;
   }
@@ -1397,6 +1401,10 @@ p {
 @media only screen and (max-width: 634px) {
   main {
     margin-top: 20px;
+  }
+
+  .main-info-subpage {
+    margin-top: 50px;
   }
 }
 
