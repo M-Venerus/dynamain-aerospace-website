@@ -1156,9 +1156,9 @@ p {
   }
 
   .menu {
-    position: fixed;
+    position: absolute;
     right: -100%;
-    top: 70px;
+    top: 46px;
     gap: 0;
     flex-direction: column;
     width: 50px;
@@ -1168,6 +1168,7 @@ p {
     opacity: 0.85;
     transition: 0.3s;
     font-size: 20px;
+    border-radius: 20px;
   }
 
   .navbar .menu .menu-item {
@@ -1177,7 +1178,7 @@ p {
   }
 
   .menu.active {
-    right: 0;
+    right: 0px;
   }
 
   .navbar .navbar-button {
@@ -1196,6 +1197,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
 
   .hamburger-button .bar {
