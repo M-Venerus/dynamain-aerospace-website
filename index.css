@@ -968,6 +968,30 @@ p {
   font-weight: 600;
 }
 
+/* Resources and Contact Subpages */
+
+.resource-info h2 {
+  margin: 20px 0 10px 0;
+  padding: 10px 0 10px 0;
+}
+
+.resource-info h4 {
+  padding-top: 10px;
+}
+
+.resource-info p{
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.last-paragraph {
+  margin-bottom: 100px;
+}
+
+.second-h2 h2{
+  margin-top: 80px;
+}
+
 /* Responsiveness */
 @media only screen and (max-width: 1200px) {
   :root {
@@ -1179,6 +1203,7 @@ p {
     font-size: 20px;
     border-radius: 20px;
     font-size: 28px;
+    padding-bottom: 6px;
   }
 
   .navbar .menu .menu-item a {
