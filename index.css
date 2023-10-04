@@ -506,7 +506,8 @@ p {
 .main-info-subpage h1 {
   color: #fff;
   text-shadow: 3px 3px 4px #00151f83;
-  font-size: var(--h1-size-alt);
+  font-size: 80px;
+  margin-top: -10px;
 }
 
 .main-info-subpage::after {
@@ -1016,6 +1017,10 @@ p {
     margin: 0;
   }
 
+  .main-info-subpage h1 {
+    font-size: 60px;
+  }
+
   .animated-canvas {
     width: 100%;
     top: -796px;
@@ -1161,7 +1166,7 @@ p {
     top: 46px;
     gap: 0;
     flex-direction: column;
-    width: 50px;
+    width: 80px;
     text-align:left ;
     justify-content: left;
     background-color: rgba(79, 117, 240, 50);
@@ -1169,10 +1174,11 @@ p {
     transition: 0.3s;
     font-size: 20px;
     border-radius: 20px;
+    font-size: 28px;
   }
 
-  .navbar .menu .menu-item {
-    margin: 2px 40px 4px 0px;
+  .navbar .menu .menu-item a {
+    margin: 10px 40px 4px 0px;
     opacity: 1;
     font-size: 20px;
   }
@@ -1397,6 +1403,11 @@ p {
 
   .global-section {
     padding: var(--spacing-xl) 0 var(--spacing-sm) 0;
+  }
+
+  .main-info-subpage h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
   }
 }
 
@@ -1708,6 +1719,11 @@ p {
     width: 110px;
     top: -134px;
     left: -90px;
+  }
+
+  .main-info-subpage h1 {
+    font-size: 40px;
+    margin-top: 12px;
   }
 
   .projects-section {
