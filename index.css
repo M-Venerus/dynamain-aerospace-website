@@ -1191,7 +1191,7 @@ p {
   .menu {
     position: absolute;
     right: -100%;
-    top: 46px;
+    top: 50px;
     gap: 0;
     flex-direction: column;
     width: 80px;
